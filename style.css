@@ -1,0 +1,63 @@
+#logo{
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border-color: lightblue;
+   padding-top:5px;
+   padding-bottom:0px;
+   margin-bottom: 1px;
+   }
+   ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #000000;
+   }
+   li {
+   float: left;
+   }
+   li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   }
+   li a:hover {
+   background-color: #111;
+   }
+   h1{
+   margin-bottom:10px;
+   margin-top:0px;
+   margin-left:10px;
+   color: black;
+   }
+   h2{
+   background-color: lightblue;
+   
+   }
+   #info{
+   background-color: white;
+   font-weight: 20;
+   font-size: 20px;
+   font-family: bold;
+   color:black;}
+   #back{
+   height:300px;
+   float: left;
+   margin-left: 60px;
+   }
+
+   /* new css */
+   .myForm{
+      height:300px;
+      width: 1000px;
+      margin: auto;
+   }
+   form{
+      float: left;
+   }
+   footer{
+      text-align: center;
+   }

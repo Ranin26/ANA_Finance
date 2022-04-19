@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HomePage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="https://ibb.co/j6Zn2MW"><img src="https://i.ibb.co/j6Zn2MW/ANA-Financials-logos-white.png" alt="ANA-Financials-logos-white" border="0"></a></h1>
+<ul>
+<li><a class="homepage" href="homepage.html">Home</a></li>
+<li><a href="Login.html">Login Here</a></li>
+<li><a href="ContactUs.html">Contact Us</a></li>
+<li><a href="about.html">About Us</a></li>
+</ul>
+<center><h2>Sign up</h2></center>
+
+<div class="myForm">
+    <form action="#">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" id="cname" name="cname"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" id="email" name="cemail"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" id="password" name="password"></td>
+              </tr>
+               <td>Re-enter Password</td>
+            
+                <td><input type="text" id="Re-enter password" name="Re-enter password">
+                </td>
+                    
+                </td>
+            </tr>
+        </table>
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </form>
+    <a href="https://ibb.co/vPXGwdS"><img src="https://i.ibb.co/vPXGwdS/ANA-Financials-logos.jpg" alt="ANA-Financials-logos" border="0"></a>
+</div>
+<hr>
+<footer><b>We offer the best financial Services & Advice</b></footer>
+<!-- javascript starts here -->
+<script>
+    function submitForm(){
+        var name = document.getElementById("cname").value; /* get element value from html form through getElementById*/
+        var email = document.getElementById("email").value;
+        var phnum = document.getElementById("phnum").value;
+        var help = document.getElementById("help").value;
+        var numbers = /^[0-9]+$/; /* used to compare numbers */
+        var emailformat = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/; /* used to compare valid email address */
+
+        if(name=="" || email=="" || phnum=="" || help==""){ /* check input is empty or not */
+            alert("field can not be empty");
+            return false; 
+        }
+
+         if((!email.match(emailformat))){ /* matching with email regular expression */
+            alert('enter valid email address'); /* error msg if invalid email id */
+         }
+
+         if((!phnum.match(numbers))){ /* match phone number is matching with numbers regular expression or not */
+            alert('enter only numbers'); /* error msg if numbers not entered */
+         }
+    }
+</script>
+</body>
+</html>
