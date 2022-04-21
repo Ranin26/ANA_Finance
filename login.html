@@ -12,40 +12,21 @@
 <li><a href="contact_us.html">Contact Us</a></li>
 <li><a href="about.html">About Us</a></li>
 </ul>
-<center><h2>Sign up</h2></center>
+<center><h2>Login</h2></center>
 
 <div class="myForm">
     <form action="#">
         <table>
             <tr>
-                <td>First Name</td>
-                <td><input type="text" id="fname" name="fname"></td>
-            </tr>
-            <tr>
-                <td>Last Name</td>
-                <td><input type="text" id="lname" name="lname"></td>
-            </tr>
-            <tr>
                 <td>Username</td>
-                <td><input type="text" id="username" name="username"></td>
-            </tr>
-            <tr>
-                <td>Email</td>
                 <td><input type="text" id="email" name="email"></td>
             </tr>
             <tr>
                 <td>Password</td>
                 <td><input type="text" id="password" name="password"></td>
-              </tr>
-               <td>Re-enter Password</td>
-            
-                <td><input type="text" id="confirmpassword" name="confirmpassword">
-                </td>
-                    
-                </td>
             </tr>
         </table>
-        <button type="submit" onclick="submitForm()">Submit</button>
+        <button type="submit">Submit</button>
     </form>
     <img src="https://i.ibb.co/vPXGwdS/ANA-Financials-logos.jpg" alt="ANA-Financials-logos" border="0">
 </div>
@@ -53,12 +34,8 @@
 <footer><b>We offer the best financial Services & Advice</b></footer>
 <!-- javascript starts here -->
 <script>
-    //var firstName = document.getElementById("fname")
-    //var lastName = document.getElementById("lname")
     //var userName = document.getElementById("username")
-    //var email = document.getElementById("email")
     //var password = document.getElementById("password")
-    //var confirmpassword = document.getElementById("confirmpassword")
     function submitForm(){
         var numbers = /^[0-9]+$/; /* used to compare numbers */
         var emailformat = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/; /* used to compare valid email address */

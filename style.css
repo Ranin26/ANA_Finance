@@ -55,6 +55,11 @@
       width: 1000px;
       margin: auto;
    }
+   .info{
+      height:300px;
+      width: 1000px;
+      margin: auto;
+   }
    form{
       float: left;
    }
