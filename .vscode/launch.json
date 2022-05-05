@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\airru\\source\\Cosc480\\Project\\ANA_Finance\\index.html"
+            "file": "/Users/ayomikunakinyemi/Desktop/480/ANA_Finance/index.html"
         }
     ]
 }

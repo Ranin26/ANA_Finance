@@ -15,6 +15,7 @@
 <center><h2>Sign up</h2></center>
 
 <div class="myForm">
+    <div id="validation"></div>
     <form action="#">
         <table>
             <tr>
@@ -53,29 +54,72 @@
 <footer><b>We offer the best financial Services & Advice</b></footer>
 <!-- javascript starts here -->
 <script>
-    //var firstName = document.getElementById("fname")
-    //var lastName = document.getElementById("lname")
-    //var userName = document.getElementById("username")
-    //var email = document.getElementById("email")
-    //var password = document.getElementById("password")
-    //var confirmpassword = document.getElementById("confirmpassword")
-    function submitForm(){
-        var numbers = /^[0-9]+$/; /* used to compare numbers */
-        var emailformat = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/; /* used to compare valid email address */
+    var firstName = document.getElementById("fname")
+    var lastName = document.getElementById("lname")
+    var userName = document.getElementById("username")
+    var email = document.getElementById("email")
+    var password = document.getElementById("password")
+    var confirmpassword = document.getElementById("confirmpassword")
 
-        if(name=="" || email=="" || phnum=="" || help==""){ /* check input is empty or not */
-            alert("field can not be empty");
-            return false; 
+    firstName.addEventListener('input', submitForm);
+    lastName.addEventListener('input', submitForm);
+    userName.addEventListener('input', submitForm);
+    email.addEventListener('input', submitForm);
+    email.addEventListener('input', submitForm);
+    password.addEventListener('input', submitForm);
+    confirmpassword.addEventListener('input', submitForm);
+
+
+    function submitForm(e){
+        //alert("field can not be empty");
+        var text = e.target.value;
+
+        if(e.target.id == "email"){
+            var test2 = String(e.target.value);
+            checkEmail(test2);
         }
 
-         if((!email.match(emailformat))){ /* matching with email regular expression */
-            alert('enter valid email address'); /* error msg if invalid email id */
-         }
+        var numbers = /^[0-9]+$/; /* used to compare numbers */
+        
 
-         if((!phnum.match(numbers))){ /* match phone number is matching with numbers regular expression or not */
-            alert('enter only numbers'); /* error msg if numbers not entered */
-         }
+       
+        // if (e.target.id == "email"){ 
+        //  if(!(email.match(emailformat))){ /* matching with Email regular expression */
+        //  alert('enter valid email address'); /* error msg if invalid email id */
+        //  }
+        //  }
+
+        // if((!phnum.match(numbers))){ /* match phone number is matching with numbers regular expression or not */
+        // alert('enter only numbers'); /* error msg if numbers not entered */
+        //  }
+
+         if(text==""){ /* check input is empty or not */
+            var field = document.getElementById("validation");
+            alert ("field cannot be empty")
+            //field.innerHTML = "field can not be empty";
+
+        }
+
+            
+        //checkEmail(text);
+        
+        
     }
+
+    function checkEmail(email){
+       
+        var emailformat = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/; /* used to compare valid email address */
+        if(!email.match(emailformat)){
+        var field = document.getElementById("validation");
+        field.innerHTML = "Enter Valid Email Address";
+
+           
+        //alert('Enter Valid Email Address');
+        //console.log(emailformat.test(email));
+       }
+       
+    }
+
 </script>
 </body>
 </html>
