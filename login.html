@@ -18,12 +18,12 @@
     <form action="#">
         <table>
             <tr>
-                <td>Username</td>
-                <td><input type="text" id="email" name="email"></td>
+                <td>email</td>
+                <td><input type="text" id="email" name="email" required minlength="8"></td>
             </tr>
             <tr>
                 <td>Password</td>
-                <td><input type="text" id="password" name="password"></td>
+                <td><input type="password" id="password" name="password" required minlength="8"> </td>
             </tr>
         </table>
         <button type="submit">Submit</button>
@@ -32,8 +32,9 @@
 </div>
 <hr>
 <footer><b>We offer the best financial Services & Advice</b></footer>
+
 <!-- javascript starts here -->
-<script>
+<!-- <script>
     //var userName = document.getElementById("username")
     //var password = document.getElementById("password")
     function submitForm(){
@@ -55,6 +56,6 @@
     }
 
 
-</script>
+</script> -->
 </body>
 </html>
