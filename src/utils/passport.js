@@ -1,7 +1,9 @@
 const LocalStrategy = require("passport-local/lib").Strategy;
 const passport = require("passport");
 const { User } = require("../models");
+const { Account } = require("../models");
 const bcrypt = require("bcryptjs");
+const req = require("express/lib/request");
 
 module.exports.passportConfig = () => {
  passport.use(

@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "name": "nodemon",
+            "program": "${workspaceFolder}/src/server.js",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "/Users/ayomikunakinyemi/Desktop/480/ANA_Finance/index.html"
+            "restart": true,
+            "runtimeExecutable": "npx",
+            "runtimeArgs": ["nodemon"],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
         }
     ]
 }

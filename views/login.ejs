@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HomePage</title>
+<link rel="stylesheet" href="/public/assets/css/style.css">
+</head>
+<body>
+<a href="/index"><img src="/public/assets/ANA-Financials-logos-white.png" alt="ANA-Financials-logos-white" border="0"></a></h1>
+<ul>
+<li><a class="homepage" href="/index">Home</a></li>
+<li><a href="/login">Login Here</a></li>
+<li><a href="/contact_us">Contact Us</a></li>
+<li><a href="/about">About Us</a></li>
+</ul>
+<h2>Login</h2>
+
+<div class="myForm">
+    <div id="validation">
+        <% if(successMsgs){
+            successMsgs.forEach(function(msg){ %>
+                <b><%= msg %></b><br/>
+            <% });
+        } %>
+    </div>
+    <form action="api/v1/signin" method="post">
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" id="username" name="email" required minlength="5"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="password" name="password" required minlength="8"></td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+    <img src="/public/assets/ANA-Financials-logos.jpg" alt="ANA-Financials-logos" border="0">
+</div>
+<hr>
+<footer><b>We offer the best financial Services & Advice</b></footer>
+<!-- javascript starts here -->
+</body>
+</html>

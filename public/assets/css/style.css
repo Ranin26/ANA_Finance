@@ -15,7 +15,7 @@
    background-color: #000000;
    }
    li {
-   float: left;
+      float:left;
    }
    li a {
    display: block;
@@ -64,5 +64,9 @@
       float: left;
    }
    footer{
+      text-align: center;
+   }
+
+   h2 {
       text-align: center;
    }

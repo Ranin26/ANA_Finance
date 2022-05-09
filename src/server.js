@@ -17,6 +17,8 @@ const { passportConfig } = require("./utils/passport");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+//app.use(express.static(__dirname + '/public'));
+app.use('/public', express.static('public'));
 
 //Redis configurations
 
@@ -28,10 +30,11 @@ app.use(
 session({
     secret: SESSION_SECRET,
 	store: new MySQLStore({
-        host:'localhost',
+        host: process.env.DB_HOST,
         port:3306,
         user:'root',
-        database:'cookie_user'
+        password:'bowie2022',
+        database:'ana_finance'
     }),
    resave: false,
    saveUninitialized: false,
