@@ -7,3 +7,5 @@
 5. open the folder in vscode
 6. click run -> start debugging or without debugging
 7. open a browser -> navigate to localhost:4300
+
+![alt text](vscodepic.png)
